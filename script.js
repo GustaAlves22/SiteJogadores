@@ -48,11 +48,9 @@ document.addEventListener('DOMContentLoaded', function() {
         
         startBtn.style.display = 'block';
     }
-    
-    // Começar o jogo
+
+    // Redirecionar para outro site ao clicar no botão "Começar Jogo"
     startBtn.addEventListener('click', function() {
-        const numPlayers = document.querySelectorAll('.player-color').length;
-        // Redirecionar para a página do jogo:
-        // window.location.href = 'game.html';
+        window.location.href = 'https://www.exemplo.com'; // Substitua pelo URL desejado
     });
 });
