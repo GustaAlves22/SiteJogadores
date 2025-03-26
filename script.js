@@ -52,7 +52,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Começar o jogo
     startBtn.addEventListener('click', function() {
         const numPlayers = document.querySelectorAll('.player-color').length;
-        alert(`Jogo iniciado com ${numPlayers} jogadores!`);
         // Redirecionar para a página do jogo:
         // window.location.href = 'game.html';
     });
