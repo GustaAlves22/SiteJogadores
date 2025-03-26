@@ -18,16 +18,20 @@ document.addEventListener('DOMContentLoaded', function() {
             { name: 'Vermelho', class: 'red' }
         ]
     };
-    
+
+    let gameUrl = ''; // Variável para armazenar o URL do jogo
+
     // Escolher número de jogadores
     twoPlayersBtn.addEventListener('click', function() {
         startGame(2);
+        gameUrl = 'https://gameexposenac.github.io/ludo-2/'; // URL para 2 jogadores
     });
-    
+
     fourPlayersBtn.addEventListener('click', function() {
         startGame(4);
+        gameUrl = 'https://gameexposenac.github.io/ludo-4/'; // URL para 4 jogadores
     });
-    
+
     // Iniciar o jogo com número de jogadores definido
     function startGame(numPlayers) {
         gameInfo.style.display = 'block';
@@ -49,8 +53,10 @@ document.addEventListener('DOMContentLoaded', function() {
         startBtn.style.display = 'block';
     }
 
-    // Redirecionar para outro site ao clicar no botão "Começar Jogo"
+    // Redirecionar para o URL correspondente ao clicar no botão "Começar Jogo"
     startBtn.addEventListener('click', function() {
-        window.location.href = 'https://www.exemplo.com'; // Substitua pelo URL desejado
+        if (gameUrl) {
+            window.location.href = gameUrl; // Redireciona para o URL definido
+        }
     });
 });
